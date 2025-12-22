@@ -111,17 +111,6 @@ flutter run
 
 ---
 
-## 🤝 **Contributing**
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Submit a pull request
-
----
-
 ## ⚠️ **Disclaimer**
 
 This application provides AI-based beauty and makeup recommendations for educational and demonstration purposes only. Results may vary based on lighting conditions, camera quality, and facial orientation.
