@@ -103,9 +103,11 @@ flutter run
 
 1. Launch the AURA application
 2. Upload a selfie or take a photo
-3. View detected facial attributes
-4. Select a makeup style
-5. Preview virtual makeup and follow the guide
+4. View detected facial attributes
+5. View Recommendations based on detected facial attributes and user input
+6. Virtual Try-On lipstick
+7. Select a makeup style
+8. Preview virtual makeup and follow the guide
 
 ---
 
