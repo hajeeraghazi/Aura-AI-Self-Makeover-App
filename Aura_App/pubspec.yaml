@@ -1,0 +1,59 @@
+name: aura_mobile_app
+description: AI Personal Makeover Assistant - Aura
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Network requests
+  http: ^1.2.0
+
+  # Pick images (camera, gallery) for mobile + web
+  image_picker: ^1.0.7
+
+  # Open external links (shopping)
+  url_launcher: ^6.2.6
+
+  # JSON
+  flutter_json_view: ^1.1.0
+
+  # For displaying local images, profile pics, etc
+  flutter_cache_manager: ^3.3.0
+
+  # Needed for Uint8List & cross-platform handling
+  universal_io: ^2.2.2
+
+  glassmorphism: ^2.0.0
+  flutter_colorpicker: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+  # 🔥 APP ICON GENERATOR (ADD THIS)
+  flutter_launcher_icons: ^0.13.1
+
+# 🔥 APP ICON CONFIGURATION (ADD THIS)
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
