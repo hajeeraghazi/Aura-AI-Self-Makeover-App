@@ -1,121 +1,128 @@
-# Aura-AI Self-Makeover App
+# **AURA: AI Self-Makeover App**
 
-Aura-AI is a cross-platform mobile application built using **Flutter + Python** that helps users experiment with virtual makeup, perform facial analysis, explore tutorials, and receive AI-driven beauty recommendations.
-
----
-
-## 🚀 Features
-
-- Upload or capture a selfie for AI analysis.
-- Automatic **face landmark detection**, **skin-tone classification**, and **face-shape detection**.
-- Try different virtual makeup looks (lip, eye, blush overlays).
-- Step-by-step **makeup tutorial guide** for each look.
-- Personalized **product recommendations** based on detected features.
-- Smooth Flutter UI with modular backend integration.
+AURA is an AI-powered, cross-platform mobile application designed to provide personalized makeup guidance and beauty recommendations. Built using **Flutter** for the frontend and **Python (FastAPI)** for the backend, the application performs facial analysis, virtual makeup simulation, and AI-driven recommendations based on user facial features.
 
 ---
 
-## 🗂 Project Structure
+## 🚀 **Key Features**
+
+* Upload an image or capture a selfie for analysis
+* Automatic **face detection and landmark extraction**
+* **Skin tone classification** and **face shape detection**
+* Virtual makeup simulation (lipstick, blush, eye makeup overlays)
+* Step-by-step **AI-generated makeup guide**
+* Personalized **beauty and product recommendations**
+* Modular Flutter UI with REST-based backend integration
+
+---
+
+## 🗂 **Project Structure**
 
 ```
-
 Aura-AI-Self-Makeover-App/
 │
-├── lib/                     # Flutter app source
-│   ├── main.dart
-│   ├── screens/
-│   ├── widgets/
-│   ├── services/
+├── AURA_App/        # Flutter frontend
+│   ├── lib/
+│   │   ├── main.dart
+│   │   ├── screens/
+│   │   ├── widgets/
+│   │   ├── services/
+│   │   ├── models/
+│   │   └── utils/
+│   └── pubspec.yaml
+│
+├── backend/                      # Python backend (FastAPI)
+│   ├── api/
+│   │   ├── makeup_guide_api.py
+│   │   ├── classify_face.py
+│   │   └── routes.py
 │   ├── models/
-│   └── utils/
+│   ├── utils/
+│   ├── requirements.txt
+│   └── main.py
 │
-├── backend/ or python/      # Python ML/AI Logic (depends on repo structure)
-│   ├── classification.py
-│   ├── predict_tone_shape.py
-│   ├── lipstick.py
-│   ├── makeup_guide_api.py
-│   └── requirements.txt
-│
-├── assets/
-├── build.gradle / pubspec.yaml
-└── README.md
-
-````
+├── assets/                       # Images and static assets
+├── README.md
+└── .gitignore
+```
 
 ---
 
-## 🛠 Installation & Setup
+## 🛠 **Technologies Used**
+
+* **Frontend:** Flutter (Dart)
+* **Backend:** Python, FastAPI
+* **ASGI Server:** Uvicorn
+* **AI / ML Libraries:** TensorFlow, Keras
+* **Computer Vision:** OpenCV, MediaPipe, Dlib
+* **Data Processing:** NumPy, Pandas
+* **Version Control:** Git & GitHub
+* **Development Tools:** VS Code, Postman
+
+---
+
+## ⚙️ **Installation & Setup**
 
 ### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/hajeeraghazi/Aura-AI-Self-Makeover-App.git
 cd Aura-AI-Self-Makeover-App
-````
-
-### 2️⃣ Install Python Dependencies
-
-```bash
-pip install -r requirements.txt
 ```
 
-### 3️⃣ Install Flutter Dependencies
+### 2️⃣ Backend Setup
 
 ```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+### 3️⃣ Frontend Setup
+
+```bash
+cd flutter_application_1
 flutter pub get
 flutter run
 ```
 
-### 4️⃣ Permissions
+---
 
-On first launch the app may request:
+## 🎯 **System Workflow**
 
-* Camera access
-* Storage access
+1. User uploads or captures an image
+2. Backend detects face and extracts landmarks
+3. Skin tone and face shape are classified using ML models
+4. Virtual makeup overlays are applied
+5. AI generates a step-by-step makeup guide
+6. Personalized recommendations are displayed in the app
 
 ---
 
-## 🎯 How It Works (AI Pipeline)
+## 📱 **Usage Instructions**
 
-* **Face Detection & Landmarking:** FaceLandmarker model processes key facial features.
-* **Skin Tone & Face Shape Classification:** Python ML models (`classification.py`, `predict_tone_shape.py`).
-* **Makeup Rendering:** Color overlays & blending using OpenCV/Python scripts (e.g., `lipstick.py`).
-* **Makeup Guide:** Structured tutorial steps derived from JSON/model files.
-* **Recommendations:** Generated using predefined styles and user facial attributes.
-
----
-
-## 📱 Usage
-
-1. Open the app.
-2. Take a selfie or upload one.
-3. Aura-AI analyzes your face and shows:
-
-   * Skin tone
-   * Face shape
-   * Recommended looks
-4. Choose a makeup style to preview.
-5. Follow step-by-step guidance and check product suggestions.
+1. Launch the AURA application
+2. Upload a selfie or take a photo
+3. View detected facial attributes
+4. Select a makeup style
+5. Preview virtual makeup and follow the guide
 
 ---
 
-## 🤝 Contributing
+## 🤝 **Contributing**
 
-Contributions are welcome!
-
-Steps:
+Contributions are welcome.
 
 1. Fork the repository
-2. Create a new feature branch
-3. Commit your changes
-4. Make a pull request
-
-Please follow coding conventions and test thoroughly.
+2. Create a feature branch
+3. Commit changes
+4. Submit a pull request
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ **Disclaimer**
 
-This app provides *approximate* AI-based makeup predictions.
-Real-world results may vary based on lighting, camera quality, and angles.
+This application provides AI-based beauty and makeup recommendations for educational and demonstration purposes only. Results may vary based on lighting conditions, camera quality, and facial orientation.
+
 
 
